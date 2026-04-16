@@ -5,7 +5,7 @@
 Replace `ISSUE_NUMBER` with the issue number you created before running the health check.
 Replace `ZIP_PATH` with the full path to the downloaded zip file (e.g. `~/Downloads/files.zip`).
 
-> **Note:** The zip filename from claude.ai may vary. Use whatever path your browser downloaded it to. See issue #14 for investigation into filename consistency.
+> **Note:** The zip filename from claude.ai may vary. Use whatever path your browser downloaded it to.
 
 ```
 Process the health check zip from ZIP_PATH for issue ISSUE_NUMBER.
