@@ -90,6 +90,12 @@ Wait for the user's response before proceeding.
    - For CONTRADICTION Layer 2 entries → delete the incorrect one, keep or update the correct one
    - For OVERLAP Layer 2 entries → consolidate into one entry if possible
 
+   **Tier-aware rules:** If entries are tagged `[P0]`, `[P1]`, or `[P2]`, apply these constraints regardless of other recommendations:
+   - Never recommend deleting or consolidating a `[P0]` entry — skip it and note "protected (P0)" unless the user explicitly requests it
+   - Consolidate `[P1]` entries before recommending deletion
+   - `[P2]` entries are expendable — recommend these first when slots are needed
+   - Tier tags take precedence over slot-pressure heuristics
+
 2. Execute in order: deletions first → updates → additions
 
 3. After each action: call `memory_user_edits` to confirm the change took effect before proceeding to the next

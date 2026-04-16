@@ -174,6 +174,12 @@ For each action, provide:
 - Exact text for Layer 2 edits
 - One-sentence rationale
 
+**Tier-aware constraints:** If entries are tagged `[P0]`, `[P1]`, or `[P2]`, apply these rules across all groups:
+- Never include a `[P0]` entry in a delete or consolidate recommendation — mark it "protected (P0)" and skip unless the user explicitly requests it
+- Consolidate `[P1]` entries before recommending deletion — prefer merge-and-trim over remove
+- `[P2]` entries are expendable — list these first in any slot-pressure scenario
+- Tier tags take precedence over heuristics about entry length, overlap, or recency
+
 If no actions are recommended: "Your memory looks healthy. No changes recommended at this time."
 
 ### Prompt
@@ -193,6 +199,7 @@ Wait for user response.
    - Updates — call `memory_user_edits` for each update, confirm before proceeding
    - Additions in priority order — call `memory_user_edits` for each addition, confirm before proceeding
    - If slot limit reached during additions: stop and report which items were set vs. remaining
+   - **Tier guard:** before executing any deletion, verify the entry is not tagged `[P0]`. If it is and the user did not explicitly request its removal, skip it and note the skip in the report.
 
 3. **Report:**
 
