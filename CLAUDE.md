@@ -1,6 +1,6 @@
 # CLAUDE.md — Claude Environment
 
-**Version:** 2.8.0
+**Version:** 2.9.0
 
 This is the private repo that holds the actual state of your Claude environment — populated reference docs, memory exports, skills inventories, connector status, preferences, and all personal configuration.
 
