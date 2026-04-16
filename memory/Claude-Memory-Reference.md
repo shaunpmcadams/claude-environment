@@ -109,12 +109,12 @@ For active project context — goals, stakeholders, current work — prefer Proj
 ## What Makes a Good Memory Edit
 
 **Good — single stable fact, applies broadly:**
-- `VP and AI Strategy Lead at Moser Consulting.` — identity anchor
-- `Two-repo Claude model: claude-operating-framework (public) + claude-environment (private).` — structural context
-- `Uses Six Ds methodology. Push back if phases are skipped.` — behavioral nudge with enforcement
+- `Senior Engineer at Acme Corp.` — identity anchor
+- `Prefers test-driven development. Push back if tests are skipped.` — behavioral nudge with enforcement
+- `Primary stack: Python, FastAPI, PostgreSQL.` — structural context
 
 **Poor — wrong layer, too volatile, or too large:**
-- `Currently working on ARIA v2, targeting June launch` — volatile; belongs in Project Instructions
+- `Currently working on Project X, targeting June launch` — volatile; belongs in Project Instructions
 - `Prefers concise responses, no bullet points, direct tone` — belongs in Profile Preferences
 - Long multi-sentence specifications — too large; memory edits should be a single focused fact
 

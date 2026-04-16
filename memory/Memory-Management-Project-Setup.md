@@ -52,7 +52,7 @@ This project has its own scoped memory. My account-level memory (Layer 1 + Layer
 >
 > ```
 > ## My environment
-> - Framework: claude-operating-framework v2.6.1
+> - Version: 2.6.2
 > - Personal repo: [your GitHub instance and repo path]
 > - Health check mode: [auto / manual]
 > - Push command: [your git push command, if non-standard]
@@ -155,5 +155,5 @@ The project is the hub. Standalone conversations are where edits happen (because
 |------|-----------|
 | After each health check | Add latest exports to project knowledge (or paste into conversation) |
 | When memory intent changes | Update `memory-intent.md` in your repo and refresh the project knowledge file |
-| When framework updates | Check if skill files changed; re-add from GitHub if updated |
+| When skills or scripts are updated | Re-add updated files from your GitHub repo to the project |
 | Monthly | Start a conversation with starter prompt 2 to review state |

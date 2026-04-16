@@ -6,7 +6,7 @@ This is the private repo that holds the actual state of your Claude environment 
 
 ## What This Repo Is
 
-My personal Claude knowledge base. Everything here is specific to my account, my integrations, and my workflow. This is production — the source of truth for how Claude works for me.
+Your personal Claude knowledge base. Everything here is specific to your account, your integrations, and your workflow. This is production — the source of truth for how Claude works for you.
 
 ## Key Rules
 

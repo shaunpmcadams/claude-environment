@@ -37,7 +37,7 @@
 - `auto` — GitHub MCP connector available in claude.ai; health check creates issue, posts comments, closes it directly
 - `manual` — No GitHub MCP in claude.ai; health check produces zip download; Claude Code ingest step posts to issue and commits files
 
-*Update here if your connector setup changes. See framework issue #12 for Moser GHE / auto mode path.*
+*Update here if your connector setup changes.*
 
 ---
 
@@ -49,7 +49,7 @@
 @~/Documents/Claude/CLAUDE.md
 ```
 
-Set up using `scripts/global-bootstrap.md` in the framework. Verify with `/memory` — the environment CLAUDE.md should appear in the loaded files list.
+Set up automatically during `scripts/setup.md`. Verify with `/memory` — the environment CLAUDE.md should appear in the loaded files list.
 
 ---
 
@@ -107,7 +107,7 @@ Light pass plus: preferences, styles, project inventory, prompt library, context
 
 ### Phase 3: Automation (Months 1–2)
 - [ ] Establish biweekly health check cadence
-- [ ] Build custom skills (6Ds, ARIA, Moser docs)
+- [ ] Build custom skills for your workflow
 
 ### Phase 4: Autonomous Pipeline (Months 2–3)
 - [ ] Design n8n workflow for autonomous health checks

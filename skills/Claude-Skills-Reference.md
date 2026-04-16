@@ -40,10 +40,9 @@ Use `/mnt/skills/examples/skill-creator/SKILL.md`:
 
 ### Custom Skill Candidates
 
-- **Six Ds Workflow Skill** — Enforce Discover → Dream → Design → Develop → Deploy → Drive
-- **ARIA Development Skill** — Coordinator/specialist patterns and state management
-- **Moser Document Skill** — Brand-compliant document generation
-- **Daily Activity Summary Skill** — Six-category template with VP-level summary
+- **Workflow Enforcement Skill** — Enforce a structured development lifecycle
+- **Document Generation Skill** — Brand-compliant document generation
+- **Daily Activity Summary Skill** — Structured template with executive-level summary
 
 ## Maintenance
 

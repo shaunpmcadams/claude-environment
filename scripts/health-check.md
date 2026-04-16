@@ -6,7 +6,7 @@ Before running, check your `health_check_run_type` in `architecture/Claude-Envir
 
 ## Auto Mode (`run type: auto`)
 
-*Requires GitHub MCP connector in claude.ai. See issue #12 for enterprise deployment notes.*
+*Requires GitHub MCP connector in claude.ai.*
 
 Paste the prompt block below into a **claude.ai conversation**. Claude will create the GitHub issue, run all steps, post results as comments, and close the issue. No downloads, no Claude Code step required.
 

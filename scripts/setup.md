@@ -7,7 +7,7 @@ Paste into a **Claude Code session** opened in your freshly cloned `claude-envir
 ```
 GITHUB_USERNAME:       [your GitHub username]
 GITHUB_INSTANCE:       github.com
-GH_HOST_VALUE:                           # leave blank for github.com; set to hostname for enterprise (e.g. moser-consulting.ghe.com)
+GH_HOST_VALUE:                           # leave blank for github.com; set to hostname for enterprise (e.g. your-company.ghe.com)
 HEALTH_CHECK_RUN_TYPE: manual            # auto = GitHub MCP available in claude.ai / manual = no GitHub MCP
 ```
 

@@ -14,9 +14,6 @@ Structured prompts for maintaining your Claude environment knowledge base. Paste
 | `memory-dream.md` | Post-health-check Layer 1 review + Layer 2 population plan | Post-health-check, as needed |
 | `memory-populate.md` | Execute approved Layer 2 action list from a Dream session | After Dream session approval |
 | `memory-audit.md` | Monthly memory governance — intent vs. state, action list | Monthly or when responses feel off |
-| `release.md` | Cut a release — tag, GitHub Release, milestone close, Deploy comments | When ready to release batched PRs |
-| `apply-release.md` | Apply a framework release to your environment | When framework tags a new release |
-| `global-bootstrap.md` | Set up `~/.claude/CLAUDE.md` so environment loads in every session | Once, during initial setup |
 
 > **Memory governance — three tiers:**
 > - **Quick check:** `/memory-status` — Layer 2 view + Layer 1 pulse + inline fixes. 30 seconds.
