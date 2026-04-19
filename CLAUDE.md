@@ -1,6 +1,6 @@
 # CLAUDE.md — Claude Environment
 
-**Version:** 2.9.0
+**Version:** 2.10.0
 
 This is the private repo that holds the actual state of your Claude environment — populated reference docs, memory exports, skills inventories, connector status, preferences, and all personal configuration.
 
@@ -47,4 +47,10 @@ preferences/     Preferences reference + exports
 prompts/         Prompts reference + library
 scripts/         Health check and export prompts
 ```
+
+## Layer 2 Memory Mirror (Cross-Platform)
+
+Layer 2 memory (`memory_user_edits`) is read directly on claude.ai but is not accessible in Claude Code. The file below mirrors current Layer 2 state so declared behavioral rules apply in Claude Code sessions too. Refreshed by `/memory-status` and `/memory-assistant` after any Layer 2 change.
+
+@memory/layer2-current.md
 

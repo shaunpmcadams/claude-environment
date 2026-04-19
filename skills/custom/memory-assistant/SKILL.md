@@ -212,8 +212,20 @@ Added:     N entries
 Skipped:   N (reason for each)
 
 Layer 2 after:  N/30 slots used
+layer2-current.md sync needed: yes / no (no changes)
 ─────────────────────────────────────
 ```
+
+4. **Emit layer2-current.md sync content** (only if Layer 2 changed):
+
+   Produce a complete ready-to-save `memory/layer2-current.md` body reflecting the NEW Layer 2 state, filtered by tier:
+   - Include every `[P0]` and `[P1]` entry
+   - Include untagged entries (conservative default)
+   - Exclude `[P2]` entries unless the user explicitly requested they be synced
+   - Preserve the file header and replace only the "Current entries" section
+   - Update the "Last synced" line to today's date
+
+   Present the content as a copy-pasteable markdown block titled "**layer2-current.md sync content — save to `memory/layer2-current.md` in your claude-environment repo**". If the session has GitHub MCP available, offer to commit directly: "I can commit this via GitHub MCP — confirm with 'commit it'."
 
 ### If the user skips:
 

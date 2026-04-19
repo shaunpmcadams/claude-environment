@@ -113,6 +113,17 @@ Wait for the user's response before proceeding.
    ─────────────────────────────────────
    ```
 
+5. **Emit layer2-current.md sync content** (only if Layer 2 changed):
+
+   Produce a complete ready-to-save `memory/layer2-current.md` body reflecting the NEW Layer 2 state, filtered by tier:
+   - Include every `[P0]` and `[P1]` entry
+   - Include untagged entries (conservative default)
+   - Exclude `[P2]` entries unless the user explicitly requested they be synced
+   - Preserve the file header and replace only the "Current entries" section
+   - Update the "Last synced" line to today's date
+
+   Present the content as a copy-pasteable markdown block titled "**layer2-current.md sync content — save to `memory/layer2-current.md` in your claude-environment repo**". If the session has GitHub MCP available, also offer: "I can commit this directly via GitHub MCP — confirm with 'commit it'."
+
 **If the user skips:**
 
 "No changes made. For a comprehensive review — including intent coverage and conversation suggestions — run `/memory-assistant`. For a full systematic governance review, run `memory-dream.md` after your next health check."
