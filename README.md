@@ -2,7 +2,7 @@
 
 Your personal Claude knowledge base — version-controlled memory governance, custom skills, health checks, and environment configuration. Clone it, run setup, make it yours.
 
-**Version:** 2.6.2
+**Version:** 2.11.0
 
 ---
 
@@ -108,14 +108,37 @@ This environment adds observability (timestamped exports), correction (Layer 2 o
 
 ---
 
+## Automated Health Check (v2.11.0+)
+
+A daily cron job can run your health check fully unattended — opens claude.ai via Claude-in-Chrome, submits the prompt, clicks the download button, ingests the ZIP, posts results to a GitHub issue, and commits.
+
+**Setup (one time):**
+```bash
+chmod +x scripts/health-check-cron.sh
+crontab -e
+# Add: 0 9 * * * /full/path/to/your/claude-environment/scripts/health-check-cron.sh
+```
+
+**Requires:** Claude-in-Chrome extension connected in Chrome, Claude Code CLI in PATH.
+
+**macOS:** Grant Full Disk Access to `cron` in System Settings → Privacy & Security → Full Disk Access.
+
+Config (repo name, GitHub host) is read automatically from `architecture/Claude-Environment-Management-Project.md` — works for both github.com and GitHub Enterprise.
+
+**Log:** `~/Documents/Claude/.health-check.log`
+
+---
+
 ## Scripts
 
 Structured prompts in `scripts/`. Paste into claude.ai or Claude Code sessions.
 
 | Script | Purpose | Cadence |
 |--------|---------|---------|
-| `health-check.md` | Full environment audit | Every 2-4 weeks |
-| `health-check-ingest-prep.md` | Ingest health check output into repo | After each health check |
+| `health-check.md` | Full environment audit (manual) | Every 2-4 weeks |
+| `auto-health-check.md` | Automated health check orchestration prompt | Run by cron daily |
+| `health-check-cron.sh` | Cron wrapper — triggers automated health check | Registered in crontab |
+| `health-check-ingest-prep.md` | Ingest health check output into repo (manual mode) | After each manual health check |
 | `memory-dream.md` | Layer 1 review + Layer 2 population plan | After health checks |
 | `memory-populate.md` | Execute approved Layer 2 action list | After Dream approval |
 | `memory-audit.md` | Intent vs. state comparison | Monthly |
